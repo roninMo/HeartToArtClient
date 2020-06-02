@@ -1,0 +1,9 @@
+<mat-menu #appMenu="matMenu">
+    <button mat-menu-item><a routerLink="/app-landing-page" routerLinkActive="active">Landing</a></button>
+    <button mat-menu-item><a routerLink="/app-create-song" routerLinkActive="active">Create a song</a></button>
+    <!-- <button mat-menu-item><a routerLink="/app-song-detail" routerLinkActive="active">test</a></button> -->
+  
+    </mat-menu>
+    <button mat-icon-button [matMenuTriggerFor]="appMenu" class="colwit">
+      <mat-icon class="colwit"><i class="fa fa-caret-down colwit"></i>Songs</mat-icon>
+    </button>

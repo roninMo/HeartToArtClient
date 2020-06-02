@@ -1,0 +1,65 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+.row {
+    display: flex;
+    border-radius: 5px;
+}
+.row-one { 
+    height: 23vh;
+    background-color: #F5F7F9;
+    display:flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+
+/* .image {
+    flex-grow: 1;
+    max-width: 15vw;
+    margin: auto;
+    text-align: center;
+} */
+.title {
+    flex-grow: 1;
+    max-width: 40vw;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    
+}
+
+
+/* 
+.albumLinks
+*/
+.lyrics {
+    min-height: 48vh;
+    min-width: 80%;
+    flex-grow: 1;
+    text-align: center;
+    padding: 1rem 5rem;
+    box-shadow: 0 0 1px #000000;
+    font-size: 1.4rem;
+}
+
+h2 { 
+    background-color: #F5F7F9;
+}
+
+.edit {
+    background-color: #F5F7F9;
+    padding: 2rem;
+    margin-top: .5rem;
+    border-radius: 5px;
+}
+
+.form {
+    width: 100%;
+}
+
+.btn-edit {
+    padding: 1rem;
+}

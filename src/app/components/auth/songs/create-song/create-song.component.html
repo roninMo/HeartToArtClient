@@ -1,0 +1,27 @@
+<form class="songForm" 
+[formGroup]="createSong" 
+(ngSubmit)="onClickSubmit()">
+        <label for="songName">Add Song Name</label> 
+        <br/>
+        <input id="nameIn" type = "text" name = "songName" placeholder = "Song Name" formControlName="songName">
+        <br/>
+        <label for="lyrics">Add Lyrics</label>
+        <br/>
+        <textarea id="lyricsIn" name="lyrics" rows="40" placeholder="Add lyrics here" formControlName="lyrics"></textarea>
+        <br/>
+        <label for="artistName">Add Artist Name</label>
+        <br/>
+        <input id="artistIn" type = "text" name = "artistName" placeholder = "Artist Name" formControlName="artistName">
+        <br/>
+        <label for="male">Add Album Name</label>
+        <br/>
+        <input id="albumIn" type = "text" name = "albumName" placeholder = "Album Name" formControlName="albumName">
+        <br/>
+        <label for="male">Add a link to the album cover image</label>
+        <br/>
+        <input id="imgIn" type = "text" name = "albumImage" placeholder = "Album Cover" formControlName="albumImage">
+        <br/>
+        <input id="subIn" type = "submit" value = "submit">
+</form>
+
+

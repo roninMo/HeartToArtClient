@@ -1,0 +1,62 @@
+<mat-sidenav-container class="sidenav-container">
+  
+  <mat-sidenav-content>
+    <mat-toolbar class="matBar">
+      <span><a routerLink="/" routerLinkActive="active">Heart To Art</a></span>
+
+      <span class="dropdown">
+        <mat-menu #appMenu="matMenu">
+          <form (ngSubmit)="logout()"><button type="submit" mat-menu-item>Logout</button></form>
+          <button mat-menu-item><a routerLink="/app-login" routerLinkActive="active">Login</a></button>
+          <button mat-menu-item><a routerLink="app-sign-up" routerLinkActive="active">Signup</a></button>
+        
+          </mat-menu>
+          <button mat-icon-button [matMenuTriggerFor]="appMenu">
+            <mat-icon><i class="fa fa-caret-down"></i>Login/Signup</mat-icon>
+          </button>
+      </span>
+    
+      <span class="dropdown">
+        <app-search-menu></app-search-menu>
+      </span>
+
+
+      <span class="spacer"></span>
+      <!-- <span>
+        <a routerLink="/app-landing-page" routerLinkActive="active">Landing</a>
+      </span> -->
+      <span class="spacer"></span>
+      <span class="spacer"></span>
+      <span class="spacer"></span>
+      <span class="spacer"></span>
+      <span class="spacer"></span>
+      <span class="spacer"></span>
+      <span class="spacer"></span>
+
+
+      <span>
+        <form [formGroup]="songSearch" (ngSubmit)="searchSubmit()">
+          <!-- <mat-form-field appearance="outline" class="form">
+            <mat-label>Search for a song here</mat-label>
+            <input matInput placeholder="Search for a song here" formControlName="userSearch"> -->
+            <!-- <mat-icon matSuffix>sentiment_very_satisfied</!-->
+            <!-- <mat-hint>Song</mat-hint>
+        </mat-form-field> -->
+
+          <input 
+          class="searchIn" 
+          type="text" 
+          placeholder="Search for a song here" 
+          name="search"
+          formControlName="songSearch">
+
+          <button class="searchBtn" type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </span>
+
+    </mat-toolbar>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+ 
+

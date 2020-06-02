@@ -1,0 +1,15 @@
+.landDiv {
+    min-height: 400px;
+}
+
+a {
+    text-decoration: none;
+    padding: 1.25rem;
+    margin: 1.25rem;
+}
+
+.nav {
+    padding: 2rem;
+    background-color: #F5F7F9;
+    border-radius: 5px;
+}

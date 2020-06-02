@@ -1,0 +1,59 @@
+#footWrap {
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-auto-rows: minmax(20px, auto);
+    margin-left: 20px;
+    padding: 5px;
+    color: white;
+}
+#socialDiv {
+    grid-column: 1/2;
+    grid-row: 1;
+}
+#iconCont {
+    font-size: 2.5rem;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr  1fr;
+    grid-auto-rows: minmax(10px, auto);
+    margin-left: 5px;
+}
+.fa  {
+    color: white;
+}
+#faceDiv {
+    grid-column: 1/2;
+    grid-row: 1
+}
+#instaDiv {
+    grid-column: 2/3;
+    grid-row: 1
+}
+#twitDiv {
+    grid-column: 3/4;
+    grid-row: 1;
+}
+#spotDiv {
+    grid-column: 4/5;
+    grid-row: 1;
+}
+#copyDiv {
+    grid-column: 2/3;
+    grid-row: 1;
+    text-align: center;
+    margin-right: 20px;
+}
+#contactBTN {
+    color: white;
+    font-size: 110%;
+    color: white;
+    text-decoration: none;
+}
+#contactDiv {
+    text-align: right;
+    grid-column: 3/4;
+    grid-row: 1;
+    margin-right: 20px;
+}
+#contactBTN:hover {
+    color: lightgrey;
+}

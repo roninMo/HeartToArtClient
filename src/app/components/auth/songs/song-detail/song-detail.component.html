@@ -1,0 +1,65 @@
+<div class="container" *ngFor="let songData of songAr">
+    <div class="row-one">
+        <!-- <div class="image">image</div> -->
+
+        <div class="title">
+            <p> <b>Song:</b> {{ songData["song"]["albums"][0]["songs"][0]["songName"]}} </p>
+            <p> <b>Album:</b> {{ songData["song"]["albums"][0]["albumName"] }}</p>
+            <p> <b><i>by: </i></b> {{ songData["song"]["artistName"] }}</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Add a portion to the left for album links if you dare! -->
+
+        <div class="lyrics">
+            <h2>Lyrics</h2>
+            {{ songData["song"]["albums"][0]["songs"][0]["lyrics"]}}
+        </div>
+    </div>
+
+
+    <div class="edit">
+        <form (ngSubmit)="delete()">
+            <button mat-raised-button type="submit">Delete</button>
+        </form>
+    </div>
+
+    <div class="edit">
+        <form [formGroup]="editSong" (ngSubmit)="update()">
+            <mat-form-field appearance="outline" class="form">
+                <mat-label>New Song Name</mat-label>
+                <input matInput placeholder="Enter" formControlName="songName">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</!-->
+                <mat-hint>Song</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="form">
+                <mat-label>New Artist Name</mat-label>
+                <input matInput placeholder="Enter" formControlName="artistName">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <mat-hint>Artist</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="form">
+                <mat-label>New Album Name</mat-label>
+                <input matInput placeholder="Enter" formControlName="albumName">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <mat-hint>Album</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="form">
+                <mat-label>New Album Image</mat-label>
+                <input matInput placeholder="Enter" formControlName="albumImage">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <mat-hint>Album Cover</mat-hint>
+            </mat-form-field>
+            
+            <textarea id="lyricsIn" name="lyrics" rows="40" placeholder="New lyrics here" formControlName="lyrics" class="form"></textarea>
+
+            <div class="btn-edit"><button mat-raised-button type="submit">Edit</button></div>
+        </form>
+    </div>
+
+    
+</div>

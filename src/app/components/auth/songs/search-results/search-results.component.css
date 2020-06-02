@@ -1,0 +1,47 @@
+.container {
+    text-decoration: none;
+    box-shadow: 0 0 1px #000000;
+    padding: 2rem;
+    min-width: 43vw;
+
+}
+
+h2 {
+    text-align: center;
+    background-color: rgb(217, 222, 228);
+    padding: 2rem;
+    margin: auto;
+    font-weight: 600;
+    border-radius: 5px;
+}
+h4, h3 {
+    padding: 1rem;
+    font-weight: 400;
+}
+
+h5 {
+    font-weight: 500;
+}
+
+.holder {
+    margin: .5rem;
+    padding: 2rem;
+}
+
+.held {
+    margin: auto;
+    background-color: #F5F7F9;
+
+}
+
+.return {
+    margin: auto;
+    padding: none;
+    text-decoration: none;
+    max-width: 20vw;
+}
+
+form { text-align: center; padding: .5rem; }
+.btn {
+    margin: auto;
+}

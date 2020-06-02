@@ -1,0 +1,52 @@
+<div class="container" *ngIf="searchResults || searchResults !== null || searchResults !== undefined ">
+    <h2>Search Results</h2>
+
+        <div *ngFor="let songData of searchResults" class="row">
+            <!-- We're doing ngFor within ngFor to parse into array data
+                So to format it pretty
+                    :Holder > has margin and padding to space pieces together
+                    :Held > will marging:auto to center in div
+            -->
+            <div class="holder">
+
+                <!-- Song Name -->
+                <div *ngFor="let songName of songData.albums">
+                    <h3 class="held" *ngFor="let name of songName.songs">
+                        <b>Song:</b> {{ name.songName }}
+                    </h3>
+                </div>
+    
+                <!-- Artist Name  -->
+                <h4 class="held">
+                    <b>Artist:</b> {{ songData.artistName  }}
+                </h4>
+    
+                <!-- Album Name  -->
+                <h5 *ngFor="let albumName of songData.albums">
+                    <b>Album:</b> {{ albumName.albumName }}
+                </h5>
+                
+                <!-- Parse into the song id to pass into the button -->
+
+                <div class="btn"> 
+                        <div class="held" *ngFor="let songId of songData.albums">
+                            <div class="held" *ngFor="let idPass of songId.songs">
+                                <form (ngSubmit)="selectSong(idPass.id)">
+                                    <button 
+                                        mat-stroked-button 
+                                        color="primary" 
+                                        type="submit">
+                                        Go to Song 
+                                    </button>
+                                </form>
+                                
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <hr />
+            
+    </div>
+
+
+</div>
