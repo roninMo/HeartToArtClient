@@ -16,7 +16,7 @@
     "@angular/cdk": "github:angular/cdk-builds",
     "@angular/common": "~8.2.0-next.1",
     "@angular/compiler": "~8.2.0-next.1",
-    "@angular/core": "~8.2.0-next.1",
+    "@angular/core": "~11.0.5",
     "@angular/forms": "~8.2.0-next.1",
     "@angular/material": "github:angular/material2-builds",
     "@angular/platform-browser": "~8.2.0-next.1",
